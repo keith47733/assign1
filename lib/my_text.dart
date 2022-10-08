@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class MyText extends StatelessWidget {
-  final message;
-  MyText(this.message);
+class myText extends StatelessWidget {
+  final String message;
+  const myText(this.message, {Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

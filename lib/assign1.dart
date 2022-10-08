@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
-import './my_button.dart';
+import 'my_button.dart';
 import './my_text.dart';
 
 class Assign1 extends StatefulWidget {
+  const Assign1({Key key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     return _Assign1State();
@@ -33,17 +35,15 @@ class _Assign1State extends State<Assign1> {
               title: Text(appTitle),
               backgroundColor: notToggledAppBarColour,
             ),
-      body: Container(
-        width: double.infinity,
-        margin: const EdgeInsets.all(10.0),
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            isButtonToggled ? MyText(isToggledText) : MyText(notToggledText),
+            isButtonToggled ? myText(isToggledText) : myText(notToggledText),
             isButtonToggled
-                ? MyButton(myButtonText, isToggledButtonColour, pressButton)
-                : MyButton(myButtonText, notToggledButtonColour, pressButton),
+                ? myButton(myButtonText, isToggledButtonColour, pressButton)
+                : myButton(myButtonText, notToggledButtonColour, pressButton),
           ],
         ),
       ),
